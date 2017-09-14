@@ -5,11 +5,13 @@
  */
 package carlosvarela_lab8;
 
+import java.io.Serializable;
+
 /**
  *
  * @author carlo
  */
-public class Arbol {
+public class Arbol implements Serializable{
     
     private int Salud;
     

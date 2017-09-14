@@ -31,7 +31,14 @@ public class Silfide extends Hada {
     
     @Override
     public int atacar(Hada victima) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int vida;
+        if (victima instanceof Silfide) {
+            vida = victima.getSalud() - 91;
+            return vida;
+        }else{
+            vida = victima.getSalud() - super.getPoder();
+            return vida;
+        }
     }
     
 }

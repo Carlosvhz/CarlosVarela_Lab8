@@ -5,9 +5,12 @@
  */
 package carlosvarela_lab8;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
@@ -24,6 +27,10 @@ public class AdministradorArchivos {
     public AdministradorArchivos() {
     }
 
+    public AdministradorArchivos(ArrayList hadas){
+        this.hadas = hadas;
+    }
+    
     public ArrayList<Hada> getHadas() {
         return hadas;
     }
@@ -32,11 +39,36 @@ public class AdministradorArchivos {
         this.hadas = hadas;
     }
     
-    public void guardar(File archivo){
+    public void guardar(String path){
+        FileOutputStream fo = null;
+        ObjectOutputStream ob = null;
+        File archivo = new File(path);
+        try {
+            fo = new FileOutputStream(archivo);
+            ob = new ObjectOutputStream(fo);
+            for (Hada hada : hadas) {
+                ob.writeObject(hada);
+            }
+            ob.flush();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Surgio un problema");
+            e.printStackTrace();
+        }
+        try {
+            fo.close();
+            ob.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Surgio un problema");
+            e.printStackTrace();
+        }
+    }
+    
+    public void guardarComo(File Directorio) throws IOException{
+        File archivo = new File(Directorio.getPath()+".cmv");
         FileOutputStream fo = null;
         ObjectOutputStream ob = null;
         try {
-            fo = new FileOutputStream(archivo);
+            fo = new FileOutputStream(archivo.getPath());
             ob = new ObjectOutputStream(fo);
             for (Hada hada : hadas) {
                 ob.writeObject(hada);

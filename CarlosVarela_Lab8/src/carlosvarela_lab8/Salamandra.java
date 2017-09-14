@@ -30,7 +30,14 @@ public class Salamandra extends Hada {
 
     @Override
     public int atacar(Hada victima) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int vida;
+        if (victima instanceof Hamadriades) {
+            vida = victima.getSalud() - 121;
+            return vida;
+        }else{
+            vida = victima.getSalud() - super.getPoder();
+            return vida;
+        }
     }
     
 }
