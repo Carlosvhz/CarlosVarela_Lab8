@@ -106,7 +106,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mi_abrir = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        mi_guardar = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -825,8 +825,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(mi_abrir);
 
-        jMenuItem2.setText("Guardar");
-        jMenu1.add(jMenuItem2);
+        mi_guardar.setText("Guardar");
+        mi_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_guardarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mi_guardar);
 
         jMenuItem3.setText("Guardar Como");
         jMenu1.add(jMenuItem3);
@@ -969,13 +974,28 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void mi_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_abrirActionPerformed
         JFileChooser jf = new JFileChooser();
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de texto","txt");
+        jf.setFileFilter(filtro);
+        int seleccion = jf.showOpenDialog(this);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            AdministradorArchivos adm = new AdministradorArchivos();
+            hadas = adm.abrir(jf.getSelectedFile());
+            JOptionPane.showMessageDialog(this, "Hadas cargadas");
+        }
+    }//GEN-LAST:event_mi_abrirActionPerformed
+
+    private void mi_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_guardarActionPerformed
+        JFileChooser jf = new JFileChooser();
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de texto", "txt");
         jf.setFileFilter(filtro);
         int seleccion = jf.showOpenDialog(this);
-        if (seleccion = JFileChooser.APPROVE_OPTION) {
-            
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            AdministradorArchivos adm = new AdministradorArchivos();
+            adm.setHadas(hadas);
+            adm.guardar(jf.getSelectedFile());
+            JOptionPane.showMessageDialog(this, "Hadas guardadas");
         }
-    }//GEN-LAST:event_mi_abrirActionPerformed
+    }//GEN-LAST:event_mi_guardarActionPerformed
     
     
     
@@ -1059,7 +1079,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -1103,6 +1122,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem mi_abrir;
     private javax.swing.JMenuItem mi_agregarHadas;
     private javax.swing.JMenuItem mi_eliminarHada;
+    private javax.swing.JMenuItem mi_guardar;
     private javax.swing.JMenuItem mi_modificar;
     private javax.swing.JSpinner sp_alasSalamandra;
     private javax.swing.JSpinner sp_alasSilfide;
