@@ -9,13 +9,6 @@ package carlosvarela_lab8;
  *
  * @author carlo
  */
-public class CarlosVarela_Lab8 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Pelea {
     
 }
