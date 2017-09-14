@@ -13,8 +13,10 @@ public class Salamandra extends Hada {
 
     private int alas;
 
-    public Salamandra(int alas, String nombre, int Altura, int edad, int salud, int poder) {
-        super(nombre, Altura, edad, salud, poder);
+    public Salamandra(int alas, String nombre, int Altura, int edad) {
+        super(nombre, Altura, edad);
+        super.setSalud(683);
+        super.setPoder(71);
         this.alas = alas;
     }
 

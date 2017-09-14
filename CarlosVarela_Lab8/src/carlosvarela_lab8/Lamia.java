@@ -14,8 +14,11 @@ public class Lamia extends Hada {
     private int aletas, branquias;
     private boolean aumentoPoder;
 
-    public Lamia(String nombre, int Altura, int edad, int salud, int poder, int aletas, int branquias, boolean aumentoPoder) {
-        super(nombre, Altura, edad, salud, poder);
+    public Lamia(String nombre, int Altura, int edad, int aletas, int branquias) {
+        super(nombre, Altura, edad);
+        super.setSalud(475);
+        super.setPoder(57);
+        this.aumentoPoder = true;
         this.aletas = aletas;
         this.branquias = branquias;
         this.aumentoPoder = aumentoPoder;
@@ -49,11 +52,14 @@ public class Lamia extends Hada {
 
     @Override
     public int atacar(Hada victima) {
-        int vida=0;
-        if (victima instanceof Salamandra) {
-            
+        int vida;
+        if (victima instanceof Salamandra) {   
+            vida = victima.getSalud() - 81;
+            return vida;
+        }else{
+            vida = victima.getSalud() - super.getPoder();
+            return vida;
         }
-        return vida;
     }
     
 }

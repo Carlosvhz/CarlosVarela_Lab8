@@ -13,8 +13,10 @@ public class Hamadriades extends Hada{
     
     private Arbol arbol;
 
-    public Hamadriades(Arbol arbol, String nombre, int Altura, int edad, int salud, int poder) {
-        super(nombre, Altura, edad, salud, poder);
+    public Hamadriades(Arbol arbol, String nombre, int Altura, int edad) {
+        super(nombre, Altura, edad);
+        super.setSalud(373);
+        super.setPoder(78);
         this.arbol = arbol;
     }
 
@@ -28,8 +30,9 @@ public class Hamadriades extends Hada{
 
     @Override
     public int atacar(Hada victima) {
-       
+        int vida;
+        vida = victima.getSalud() - super.getPoder();
+        return vida;
     }
-    
-    
+
 }

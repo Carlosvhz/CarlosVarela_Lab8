@@ -9,6 +9,7 @@ package carlosvarela_lab8;
  *
  * @author carlo
  */
-public class Pelea {
+public class Pelea extends Thread{
     
+    private Hada peleador;
 }

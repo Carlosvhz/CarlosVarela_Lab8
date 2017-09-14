@@ -13,8 +13,10 @@ public class Silfide extends Hada {
 
     private int Alas;
 
-    public Silfide(int Alas, String nombre, int Altura, int edad, int salud, int poder) {
-        super(nombre, Altura, edad, salud, poder);
+    public Silfide(int Alas, String nombre, int Altura, int edad) {
+        super(nombre, Altura, edad);
+        super.setSalud(563);
+        super.setPoder(67);
         this.Alas = Alas;
     }
 

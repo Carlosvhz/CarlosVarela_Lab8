@@ -9,20 +9,6 @@ package carlosvarela_lab8;
  *
  * @author carlo
  */
-public class Arbol {
-    
-    private int Salud;
-    
-    public Arbol(){
-        this.Salud = 173;
-    }
-    
-    public int getSalud() {
-        return Salud;
-    }
-
-    public void setSalud(int Salud) {
-        this.Salud = Salud;
-    }
+public class AdministradorArchivos {
     
 }

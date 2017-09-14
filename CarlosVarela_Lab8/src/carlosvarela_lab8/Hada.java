@@ -1,19 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carlosvarela_lab8;
 
-/**
- *
- * @author carlo
- */
-public abstract class Hada{
+import java.io.Serializable;
+
+public abstract class Hada implements Serializable{
     
     private String nombre;
     private int Altura, edad, salud, poder;
 
+    public Hada(String nombre, int Altura, int edad){
+        this.nombre = nombre;
+        this.Altura = Altura;
+        this.edad = edad;
+    }
     public Hada(String nombre, int Altura, int edad, int salud, int poder) {
         this.nombre = nombre;
         this.Altura = Altura;
