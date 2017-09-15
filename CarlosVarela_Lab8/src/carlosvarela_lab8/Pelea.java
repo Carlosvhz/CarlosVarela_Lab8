@@ -39,23 +39,22 @@ public class Pelea extends Thread{
     
     @Override
     public void run(){
-        barra1.setValue(peleador.getSalud());
-        barra2.setValue(contrincante.getSalud());
+        barra1.setMaximum(peleador.getSalud());
+        barra2.setMaximum(contrincante.getSalud());
         try {
             while(peleador.getSalud()>0&&contrincante.getSalud()>0){
                 contrincante.setSalud(peleador.atacar(contrincante));
                 peleador.setSalud(contrincante.atacar(peleador));
-                System.out.println("peleador salud: "+peleador.getSalud()+"| Contrincante: "+contrincante.getSalud());
-                //barra1.setValue(peleador.getSalud());
-                //barra2.setValue(contrincante.getSalud());
+                barra1.setValue(peleador.getSalud());
+                barra2.setValue(contrincante.getSalud());
                 Thread.sleep(2000);
             }
         } catch (Exception e) {
         }
         if (peleador.getSalud()<0) {
-            
+            JOptionPane.showMessageDialog(null, "Ganador hada "+peleador.getNombre());
         }else{
-        
+            JOptionPane.showMessageDialog(null, "Ganador hada "+contrincante.getNombre());
         }
     }
     

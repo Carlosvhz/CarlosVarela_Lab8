@@ -79,6 +79,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jl_victima1 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jl_victima2 = new javax.swing.JLabel();
+        bt_iniciar = new javax.swing.JButton();
         jd_modificarHadas = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -565,6 +566,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addComponent(jl_victima2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        bt_iniciar.setText("Iniciar");
+        bt_iniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_iniciarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -579,6 +587,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                     .addComponent(pb_victima1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pb_victima2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_iniciar)
+                .addGap(241, 241, 241))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -591,7 +603,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pb_victima2, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(bt_iniciar)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_matanzaLayout = new javax.swing.GroupLayout(jd_matanza.getContentPane());
@@ -1138,13 +1152,16 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             jd_matanza.pack();
             jd_matanza.setModal(true);
             jd_matanza.setLocationRelativeTo(null);
-            jd_matanza.setVisible(true);
-            Pelea p = new Pelea(victima1, victima2, pb_victima1, pb_victima2);
-            p.start();
+            jd_matanza.setVisible(true); 
         }
         bt_peleador1.setEnabled(true);
         bt_peleador2.setEnabled(true);
     }//GEN-LAST:event_bt_matanzaMouseClicked
+
+    private void bt_iniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciarMouseClicked
+        Pelea p = new Pelea(victima1, victima2, pb_victima1, pb_victima2);
+        p.start();
+    }//GEN-LAST:event_bt_iniciarMouseClicked
     
    
     public void recargarListas(){
@@ -1195,6 +1212,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton bt_agregarSalamandra;
     private javax.swing.JButton bt_añadirSilfide;
     private javax.swing.JButton bt_eliminarHada;
+    private javax.swing.JButton bt_iniciar;
     private javax.swing.JButton bt_matanza;
     private javax.swing.JButton bt_modificar;
     private javax.swing.JButton bt_peleador1;
