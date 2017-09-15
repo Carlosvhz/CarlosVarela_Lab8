@@ -99,6 +99,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         bt_eliminarHada = new javax.swing.JButton();
         jd_about = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
         bt_play = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -759,15 +761,27 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Este proyecto fue realizado por Carlos Varela numero de cuenta 11711380 Creado debido a la asignacion del Lab de programación II por parte de los instructores y estudiantes Alexy y Manuel, cuyos apellidos aún son desconocidos... Gracias por utilizar este inestable pero hecho con amor :3");
+        jScrollPane4.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 306, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_aboutLayout = new javax.swing.GroupLayout(jd_about.getContentPane());
@@ -930,7 +944,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             if (tf_nombreHamadriade.getText().equals("")||tf_edadHamadriade.getText().equals("")) {
                 JOptionPane.showMessageDialog(jd_agregarHadas, "Llene los datos");
             }else{
-                hamadriade = new Hamadriades(new Arbol(), tf_nombreHamadriade.getText(), (Integer)sp_alturaHamadriade.getValue(), Integer.parseInt(tf_edadHamadriade.getText()));
+                hamadriade = new Hamadriades(tf_nombreHamadriade.getText(), (Integer)sp_alturaHamadriade.getValue(), Integer.parseInt(tf_edadHamadriade.getText()));
                 hadas.add(hamadriade);
                 JOptionPane.showMessageDialog(jd_agregarHadas, "Hada ingresada");
                 tf_nombreHamadriade.setText("");
@@ -1265,11 +1279,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSpinner jSpinner10;
     private javax.swing.JSpinner jSpinner8;
     private javax.swing.JSpinner jSpinner9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JDialog jd_about;

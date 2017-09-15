@@ -11,22 +11,13 @@ package carlosvarela_lab8;
  */
 public class Hamadriades extends Hada{
     
-    private Arbol arbol;
 
-    public Hamadriades(Arbol arbol, String nombre, int Altura, int edad) {
+    public Hamadriades(String nombre, int Altura, int edad) {
         super(nombre, Altura, edad);
-        super.setSalud(373);
-        super.setPoder(78);
-        this.arbol = arbol;
+        super.setSalud(546);
+        super.setPoder(78);;
     }
 
-    public Arbol getArbol() {
-        return arbol;
-    }
-
-    public void setArbol(Arbol arbol) {
-        this.arbol = arbol;
-    }
 
     @Override
     public int atacar(Hada victima) {
