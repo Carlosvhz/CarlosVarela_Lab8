@@ -73,10 +73,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         bt_matanza = new javax.swing.JButton();
         jd_matanza = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jProgressBar2 = new javax.swing.JProgressBar();
+        pb_victima1 = new javax.swing.JProgressBar();
+        pb_victima2 = new javax.swing.JProgressBar();
+        jPanel8 = new javax.swing.JPanel();
+        jl_victima1 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jl_victima2 = new javax.swing.JLabel();
         jd_modificarHadas = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -533,39 +535,63 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(230, 42, 42));
 
-        jLabel11.setText("jLabel11");
+        pb_victima1.setToolTipText("");
 
-        jLabel17.setText("jLabel11");
+        jl_victima1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jl_victima1.setText("jLabel11");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jl_victima1, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jl_victima1, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+        );
+
+        jl_victima2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jl_victima2.setText("jLabel11");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jl_victima2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jl_victima2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(17, 17, 17)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(46, 46, 46)
-                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(46, 46, 46)
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pb_victima1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pb_victima2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pb_victima1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(61, 61, 61)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pb_victima2, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_matanzaLayout = new javax.swing.GroupLayout(jd_matanza.getContentPane());
@@ -1071,11 +1097,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     //-----------------------------------------------
     private void bt_playMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_playMouseClicked
         if (hadas.size()>=1) {
+            recargarListas();
             jd_elejirVictimas.pack();
             jd_elejirVictimas.setModal(true);
             jd_elejirVictimas.setLocationRelativeTo(null);
             jd_elejirVictimas.setVisible(true);
-            recargarListas();
         }else{
             JOptionPane.showMessageDialog(this, "No hay suficientes hadas");
         }
@@ -1102,15 +1128,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_peleador2MouseClicked
 
     private void bt_matanzaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_matanzaMouseClicked
-        if (!victima1.equals(victima2)) {
+        if (victima1.equals(victima2)) {
             JOptionPane.showMessageDialog(jd_elejirVictimas, "Elija hadas diferentes");
             victima1 = null;
             victima2 = null;
         }else{
+            jl_victima1.setText(victima1.getNombre());
+            jl_victima2.setText(victima2.getNombre());
             jd_matanza.pack();
             jd_matanza.setModal(true);
             jd_matanza.setLocationRelativeTo(null);
             jd_matanza.setVisible(true);
+            Pelea p = new Pelea(victima1, victima2, pb_victima1, pb_victima2);
+            p.start();
         }
         bt_peleador1.setEnabled(true);
         bt_peleador2.setEnabled(true);
@@ -1173,13 +1203,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -1207,15 +1235,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1235,6 +1263,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_eliminarHada;
     private javax.swing.JList<String> jl_hadas;
     private javax.swing.JList<String> jl_modificarHada;
+    private javax.swing.JLabel jl_victima1;
+    private javax.swing.JLabel jl_victima2;
     private javax.swing.JMenu mi_about;
     private javax.swing.JMenuItem mi_abrir;
     private javax.swing.JMenuItem mi_agregarHadas;
@@ -1243,6 +1273,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem mi_guardarcomo;
     private javax.swing.JMenuItem mi_modificar;
     private javax.swing.JMenuItem mi_salir;
+    private javax.swing.JProgressBar pb_victima1;
+    private javax.swing.JProgressBar pb_victima2;
     private javax.swing.JSpinner sp_alasSalamandra;
     private javax.swing.JSpinner sp_alasSilfide;
     private javax.swing.JSpinner sp_aletasLamia;
