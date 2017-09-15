@@ -99,7 +99,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         bt_eliminarHada = new javax.swing.JButton();
         jd_about = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
         bt_play = new javax.swing.JButton();
@@ -110,7 +109,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         mi_guardar = new javax.swing.JMenuItem();
         mi_guardarcomo = new javax.swing.JMenuItem();
         mi_salir = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mi_agregarHadas = new javax.swing.JMenuItem();
         mi_modificar = new javax.swing.JMenuItem();
@@ -765,23 +764,22 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText("Este proyecto fue realizado por Carlos Varela numero de cuenta 11711380 Creado debido a la asignacion del Lab de programación II por parte de los instructores y estudiantes Alexy y Manuel, cuyos apellidos aún son desconocidos... Gracias por utilizar este inestable pero hecho con amor :3");
-        jScrollPane4.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
         );
 
         javax.swing.GroupLayout jd_aboutLayout = new javax.swing.GroupLayout(jd_about.getContentPane());
@@ -869,8 +867,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
         mi_about.add(mi_salir);
 
-        jMenuItem5.setText("About");
-        mi_about.add(jMenuItem5);
+        jMenuItem1.setText("About");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        mi_about.add(jMenuItem1);
 
         jMenuBar1.add(mi_about);
 
@@ -1056,10 +1059,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_mi_salirActionPerformed
 
     private void mi_aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_aboutActionPerformed
-        jd_about.pack();
-        jd_about.setModal(true);
-        jd_about.setLocationRelativeTo(null);
-        jd_about.setVisible(true);
+        
     }//GEN-LAST:event_mi_aboutActionPerformed
 
     private void mi_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_modificarActionPerformed
@@ -1176,6 +1176,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         Pelea p = new Pelea(victima1, victima2, pb_victima1, pb_victima2);
         p.start();
     }//GEN-LAST:event_bt_iniciarMouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        jd_about.pack();
+        jd_about.setModal(true);
+        jd_about.setLocationRelativeTo(jMenu2);
+        jd_about.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
     
    
     public void recargarListas(){
@@ -1261,7 +1268,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1279,7 +1286,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSpinner jSpinner10;
     private javax.swing.JSpinner jSpinner8;
     private javax.swing.JSpinner jSpinner9;
